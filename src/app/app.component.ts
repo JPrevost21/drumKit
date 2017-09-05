@@ -22,44 +22,47 @@ export class AppComponent implements OnInit {
 
   ngOnInit() {}
 
-playDrumSoundOne() {
-  var audio = new Audio('../assets/sounds/drumSound1.wav');
-  audio.play();
-}
-playDrumSoundTwo() {
-  var audio = new Audio('../assets/sounds/drumSound2.wav');
-  audio.play();
-}
-playDrumSoundThree() {
-  var audio = new Audio('../assets/sounds/drumSound3.wav');
-  audio.play();
+  playDrumSound(items: number) {
+    let audio;
+
+    switch(items) {
+      case 1:
+        audio = new Audio('../assets/sounds/drumSound1.wav');
+        break;
+      case 2:
+        audio = new Audio('../assets/sounds/drumSound2.wav');
+        break;
+      case 3:
+        audio = new Audio('../assets/sounds/drumSound3.wav');
+        break;
+      case 4:
+        audio = new Audio('../assets/sounds/drumSound4.wav');
+        break;
+      case 5:
+        audio = new Audio('../assets/sounds/drumSound5.wav');
+        break;
+    }
+    audio.play();
   }
-playDrumSoundFour() {
-  var audio = new Audio('../assets/sounds/drumSound4.wav');
-  audio.play();
-}
-playDrumSoundFive() {
-  var audio = new Audio('../assets/sounds/drumSound5.wav');
-  audio.play();
-}
 
   @HostListener('window:keyup', ['$event'])
   keyEvent(event: KeyboardEvent) {
-    
-    if (event.keyCode === KEY_CODE.q) {
-      this.playDrumSoundOne();
-    }
-    if (event.keyCode === KEY_CODE.w) {
-      this.playDrumSoundTwo();
-    }
-    if (event.keyCode === KEY_CODE.e) {
-      this.playDrumSoundThree();
-    }
-    if (event.keyCode === KEY_CODE.r) {
-      this.playDrumSoundFour();
-    }
-    if (event.keyCode === KEY_CODE.t) {
-      this.playDrumSoundFive();
+    switch(event.keyCode) {
+      case KEY_CODE.q:
+        this.playDrumSound(1);
+        break;
+      case KEY_CODE.w:
+        this.playDrumSound(2);
+        break;
+      case KEY_CODE.e:
+        this.playDrumSound(3);
+        break;
+      case KEY_CODE.r:
+        this.playDrumSound(4);
+        break;
+      case KEY_CODE.t:
+        this.playDrumSound(5);
+        break;
     }
   }
 }

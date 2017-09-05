@@ -1,16 +1,16 @@
 <div class="jumbotron">
   <h1>Drum Kit</h1>
-  <p>A simple drum kit created using angular, bootstrap, javascript, and css.</p>
+  <p>A simple drum kit created using Angular 4, Bootstrap 4, Javascript, and CSS.</p>
 </div>
 <div class="drumBox">
-  <div (keypress)="keypressDrumSoundOne()" (click)="playDrumSoundOne()" class="drum">
+  <div (click)="playDrumSound(1)" class="drum">
   </div>
-  <div (click)="playDrumSoundTwo()" class="drum" id="high">
+  <div (click)="playDrumSound(2)" class="drum" id="high">
   </div>
-  <div (click)="playDrumSoundThree()" class="drum">
+  <div (click)="playDrumSound(3)" class="drum">
   </div>
-  <div (click)="playDrumSoundFour()" class="drum" id="high">
+  <div (click)="playDrumSound(4)" class="drum" id="high">
   </div>
-  <div (click)="playDrumSoundFive()" class="drum">
+  <div (click)="playDrumSound(5)" class="drum">
   </div>
 </div>
