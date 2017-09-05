@@ -27,19 +27,19 @@ export class AppComponent implements OnInit {
 
     switch(items) {
       case 1:
-        audio = new Audio('../assets/sounds/drumSound1.wav');
+        audio = new Audio('./assets/sounds/drumSound1.wav');
         break;
       case 2:
-        audio = new Audio('../assets/sounds/drumSound2.wav');
+        audio = new Audio('./assets/sounds/drumSound2.wav');
         break;
       case 3:
-        audio = new Audio('../assets/sounds/drumSound3.wav');
+        audio = new Audio('./assets/sounds/drumSound3.wav');
         break;
       case 4:
-        audio = new Audio('../assets/sounds/drumSound4.wav');
+        audio = new Audio('./assets/sounds/drumSound4.wav');
         break;
       case 5:
-        audio = new Audio('../assets/sounds/drumSound5.wav');
+        audio = new Audio('./assets/sounds/drumSound5.wav');
         break;
     }
     audio.play();
